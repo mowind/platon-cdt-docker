@@ -11,6 +11,6 @@ FROM ubuntu:18.04
 
 COPY --from=builder /usr/local/bin/platon-cpp /usr/local/bin/
 COPY --from=builder /usr/local/bin/wasm-opt /usr/local/bin/
-COPY --from=builder /usr/local/platon.cdt /usr/local/
+COPY --from=builder /usr/local/platon.cdt/ /usr/local/
 
 CMD [ "platon-cpp", "wasm-opt"]
