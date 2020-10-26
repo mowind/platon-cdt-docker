@@ -13,4 +13,4 @@ COPY --from=builder /usr/local/bin/platon-cpp /usr/local/bin/
 COPY --from=builder /usr/local/bin/wasm-opt /usr/local/bin/
 COPY --from=builder /usr/local/platon.cdt /usr/local/
 
-ENTRYPOINT [ "platon-cpp" ]
+CMD [ "platon-cpp", "wasm-opt"]
